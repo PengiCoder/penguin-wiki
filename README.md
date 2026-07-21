@@ -4,10 +4,8 @@
 ### Welcome to Penguin
 This is a *fun* informative site with details about the wonderful world of penguins.
 ## Website URL
-### https://penguin-website.surge.sh
-[![Deploy Website to Surge](https://github.com/MrPiggy105/Penguin-Astro/actions/workflows/deployment.yml/badge.svg)](https://github.com/MrPiggy105/Penguin-Astro/actions/workflows/deployment.yml)
-#### Backup Url (Less Updated)
-##### pengicoder.github.io/Penguin
+### https://wiki.pengi.au   
+![Vercel](https://vercelbadge.vercel.app/api/pengicoder/penguin-wiki)
 ## Contributing
 ### Codestyle & Convention
 Some general rules to keep the code nice and tidy.
