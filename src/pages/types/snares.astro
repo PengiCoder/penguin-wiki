@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Penguin-Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+---
+
+<Layout title="Penguins">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snares Penguin</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Snares Penguin</h1>
+        </header>
+        <Navbar/>
+        <main>
+            <div class="container">
+                <nav class="contents">
+                    <h2>Contents:</h2>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#diet">Diet</a></li>
+                        <li><a href="#behavior">Social Behavior</a></li>
+                        <li><a href="#facts">Facts</a></li>
+                    </ul>
+                </nav>
+
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <ul>
+                        <li>Scientific Name: Eudyptes robustus</li>
+                        <li>Size: Approximately 50-60 cm (20-24 inches) tall, weighing 2.5-4 kg (5.5-8.8 lbs).</li>
+                        <li>Habitat: Endemic to the Snares Islands, a small group of islands off the southern coast of New Zealand.</li>
+                        <li>Conservation Status: Vulnerable</li>
+                    </ul>
+                </section>
+                <section id="diet">
+                    <h2>Diet</h2>
+                    <p>The Snares Penguin feeds primarily on krill, as well as small fish and squid, which they hunt in the waters surrounding the Snares Islands.</p>
+                </section>
+                <section id="behavior">
+                    <h2>Social Behavior</h2>
+                    <p>Snares Penguins breed in dense colonies, often under the cover of the Olearia forest or on rocky slopes. They form monogamous pairs and exhibit typical crested penguin behaviors, including vocalizations and displays during courtship and territorial defense. They lay two eggs, with the first being smaller and often not surviving.</p>
+                </section>
+                <section id="facts">
+                    <h2>Interesting Facts</h2>
+                    <ul>
+                        <li>They have distinctive thick yellow crests that start at the base of their bill and extend back over their eyes.</li>
+                        <li>Snares Penguins are known for their relatively calm demeanor compared to some other crested penguins.</li>
+                        <li>Their breeding colonies are located in a very restricted geographic area, making them vulnerable to environmental changes and introduced predators.</li>
+                        <li>The Olearia forests provide important nesting habitat and shelter for these penguins.</li>
+                        <li>Conservation efforts focus on protecting their island habitat and preventing the introduction of pests.</li>
+                    </ul>
+                </section>
+            </div>
+            <footer>
+                <p><span class="copyleft">&copy;</span> PengiCoder & MrPiggy105, { currentYear }</p>
+            </footer>
+        </main>
+    </body>
+</Layout>
+
+<style>
+    .contents ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contents li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+
+    h1{
+        text-align: center;
+        height: 100%;
+        font-family: 'Orkney', Arial;
+    }
+</style>

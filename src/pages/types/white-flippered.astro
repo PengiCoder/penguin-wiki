@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Penguin-Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+---
+
+<Layout title="Penguins">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>White-flippered Penguin</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>White-flippered Penguin</h1>
+        </header>
+        <Navbar/>
+        <main>
+            <div class="container">
+                <nav class="contents">
+                    <h2>Contents:</h2>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#diet">Diet</a></li>
+                        <li><a href="#behavior">Social Behavior</a></li>
+                        <li><a href="#facts">Facts</a></li>
+                    </ul>
+                </nav>
+
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <ul>
+                        <li>Scientific Name: Eudyptula minor albosignata</li>
+                        <li>Size: Approximately 25-30 cm (10-12 inches) tall, weighing around 1 kg (2.2 lbs). It's a subspecies of the Little Blue Penguin.</li>
+                        <li>Habitat: Endemic to the Banks Peninsula and Motunau Island in the South Island of New Zealand.</li>
+                        <li>Conservation Status: Endangered</li>
+                    </ul>
+                </section>
+                <section id="diet">
+                    <h2>Diet</h2>
+                    <p>The White-flippered Penguin's diet consists mainly of small fish and squid, which they forage for in the coastal waters off the South Island of New Zealand.</p>
+                </section>
+                <section id="behavior">
+                    <h2>Social Behavior</h2>
+                    <p>White-flippered Penguins nest in colonies, often in burrows on coastal slopes or under vegetation. They form pairs that may return to the same nesting sites. They are nocturnal breeders, coming ashore to their nests at night. Their social interactions involve vocalizations and displays, similar to other small penguin species.</p>
+                </section>
+                <section id="facts">
+                    <h2>Interesting Facts</h2>
+                    <ul>
+                        <li>They are a distinct subspecies of the Little Blue Penguin, characterized by white patches on their flippers.</li>
+                        <li>Their restricted distribution makes them particularly vulnerable to habitat loss, predators (both native and introduced), and human activities.</li>
+                        <li>Conservation efforts are crucial for the survival of this subspecies and include habitat protection and predator control.</li>
+                        <li>Like Little Blue Penguins, they form rafts offshore before coming ashore at night.</li>
+                        <li>Their breeding season typically occurs in winter and spring.</li>
+                    </ul>
+                </section>
+            </div>
+            <footer>
+                <p><span class="copyleft">&copy;</span> PengiCoder & MrPiggy105, { currentYear }</p>
+            </footer>
+        </main>
+    </body>
+</Layout>
+
+<style>
+    .contents ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contents li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+
+    h1{
+        text-align: center;
+        height: 100%;
+        font-family: 'Orkney', Arial;
+    }
+</style>

@@ -1,0 +1,59 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+let currentPath = pathname.replace("/", ""); // remove the "/"s
+currentPath = currentPath.replace("/", ""); // remove the "/"s again as a failsafe
+---
+
+<div class="navbar">
+	<nav class="navbar">
+		<li><a href="/" class={currentPath === "" ? "active" : "inactive"}>Home</a></li>
+		<li><a href="/pages/" class={currentPath === "pages" ? "active" : "inactive"}>Pages</a></li>
+		<li><a href="/about/" class={currentPath === "about" ? "active" : "inactive"}>About</a></li>
+		<li><a href="/contact/" class={currentPath === "contact" ? "active" : "inactive"}>Contact</a></li>
+		<li><a href="/gallery" class={currentPath === "gallery" ? "active" : "inactive"}>Gallery</a></li>
+		<li><a href="/faqs/" class={currentPath === "faqs" ? "active" : "inactive"}>FAQs</a></li>
+		<li><a href="https://github.com/PengiCoder/Penguin">Repository</a></li>
+		<li><a href="/search/" class={currentPath === "search" ? "active" : "inactive"}>Search</a></li>
+    <li><a href="/penguin-fun/index.html" class={currentPath === "fun" ? "active" : "inactive"}> </a></li>
+    </nav>
+</div>
+<style>
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #282b2ebe;
+    opacity: 92.5%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+.navbar li {
+    float: left;
+    border-right: 1px solid rgb(121, 121, 121);
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #282b2ebe;
+}
+
+.navbar a:hover {
+    background-color: rgb(0, 0, 0);
+  }
+
+.navbar a.active {
+    background-color: #5b9bdb;
+}
+  
+.navbar li:last-child {
+    border-right: none;
+    border-left: 1px solid rgb(121, 121, 121);
+    float: right;
+}
+</style>

@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Penguin-Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+---
+
+<Layout title="Penguins">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fiordland Penguin</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Fiordland Penguin</h1>
+        </header>
+        <Navbar/>
+        <main>
+            <div class="container">
+                <nav class="contents">
+                    <h2>Contents:</h2>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#diet">Diet</a></li>
+                        <li><a href="#behavior">Social Behavior</a></li>
+                        <li><a href="#facts">Facts</a></li>
+                    </ul>
+                </nav>
+
+                <section id="overview">
+                    <h2>Overview</h2>
+                    <ul>
+                        <li>Scientific Name: Eudyptes pachyrhynchus</li>
+                        <li>Size: Approximately 55-60 cm (22-24 inches) tall, weighing 2-4 kg (4.4-8.8 lbs).</li>
+                        <li>Habitat: Breeds in dense temperate rainforests along the southwest coast of New Zealand's South Island and on Stewart Island/Rakiura.</li>
+                        <li>Conservation Status: Endangered</li>
+                    </ul>
+                </section>
+                <section id="diet">
+                    <h2>Diet</h2>
+                    <p>The Fiordland Penguin's diet consists mainly of small fish, squid, and crustaceans, which they hunt in the coastal waters near their breeding sites.</p>
+                </section>
+                <section id="behavior">
+                    <h2>Social Behavior</h2>
+                    <p>Fiordland Penguins typically nest in small colonies or even as solitary pairs under dense forest cover, rock overhangs, or in caves. They are known for their shy and elusive nature. Their social interactions involve vocalizations and displays, particularly during the breeding season to establish and maintain pair bonds and territories.</p>
+                </section>
+                <section id="facts">
+                    <h2>Interesting Facts</h2>
+                    <ul>
+                        <li>They are also known as the Tawaki.</li>
+                        <li>Fiordland Penguins have distinctive thick yellow crests that droop behind their eyes.</li>
+                        <li>They undertake relatively short foraging trips compared to some other penguin species.</li>
+                        <li>Their rainforest breeding habitat makes them unique among penguins.</li>
+                        <li>The population is declining due to habitat degradation, introduced predators, and potentially climate change.</li>
+                    </ul>
+                </section>
+            </div>
+            <footer>
+                <p><span class="copyleft">&copy;</span> PengiCoder & MrPiggy105, { currentYear }</p>
+            </footer>
+        </main>
+    </body>
+</Layout>
+
+<style>
+    .contents ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contents li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+
+    h1{
+        text-align: center;
+        height: 100%;
+        font-family: 'Orkney', Arial;
+    }
+</style>

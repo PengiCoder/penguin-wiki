@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Penguin-Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+---
+
+<Layout title="Penguins">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Penguins</title>
+	</head>
+	<body>
+		<header class="header">
+        	<h1>Welcome to the World of Penguins!</h1>
+    	</header>
+		<Navbar/>
+        <main>
+            <div class="container">
+                <nav class="contents">
+                    <h2>Contents:</h2>
+                    <ul>
+                        <li><a href="#overview">Overview of Penguins</a></li>
+                        <li><a href="#types">Types of Penguins</a></li>
+                    </ul>
+                </nav>
+                <hr>
+                <section id="overview">
+                    <h2>Overview of Penguins</h2>
+                    <p>Penguins, beloved for their distinctive waddle and tuxedo-like appearance, are a fascinating group of flightless birds found predominantly in the Southern Hemisphere. These charismatic creatures are highly adapted to life in the water, with streamlined bodies built for efficient swimming. With their wings modified into flippers, they navigate the icy waters with grace, relying on their incredible diving abilities to hunt for fish, squid, and krill. While often associated with Antarctica, penguins inhabit a range of environments, from the icy shores of the Antarctic to the warmer climates of the Galápagos Islands. Despite the challenges they face, including climate change and habitat loss, penguins continue to capture the hearts of people worldwide, symbolizing resilience and the beauty of the natural world.</p>
+                </section>
+                <section id="types">
+                    <h2>Types of Penguins</h2>
+                    <ul>
+                        <li><a href="/types/adelie">Adélie Penguin (Pygoscelis adeliae)</a></li>
+                        <li><a href="/types/african">African Penguin (Spheniscus demersus)</a></li>
+                        <li><a href="/types/chinstrap">Chinstrap Penguin (Pygoscelis antarctica)</a></li>
+                        <li><a href="/types/emperor">Emperor Penguin (Aptenodytes forsteri)</a></li>
+                        <li><a href="/types/erect-crested">Erect-crested Penguin (Eudyptes sclateri)</a></li>
+                        <li><a href="/types/fiordland">Fiordland Penguin (Eudyptes pachyrhynchus)</a></li>
+                        <li><a href="/types/galapagos">Galapagos Penguin (Spheniscus mendiculus)</a></li>
+                        <li><a href="/types/gentoo">Gentoo Penguin (Pygoscelis papua)</a></li>
+                        <li><a href="/types/humboldt">Humboldt Penguin (Spheniscus humboldti)</a></li>
+                        <li><a href="/types/king">King Penguin (Aptenodytes patagonicus)</a></li>
+                        <li><a href="/types/little-blue">Little Blue Penguin (Eudyptula minor)</a></li>
+                        <li><a href="/types/macaroni">Macaroni Penguin (Eudyptes chrysolophus)</a></li>
+                        <li><a href="/types/magellanic">Magellanic Penguin (Spheniscus magellanicus)</a></li>
+                        <li><a href="/types/rockhopper">Rockhopper Penguin (Eudyptes chrysocome)</a></li>
+                        <li><a href="/types/royal">Royal Penguin (Eudyptes schlegeli)</a></li>
+                        <li><a href="/types/snares">Snares Penguin (Eudyptes robustus)</a></li>
+                        <li><a href="/types/yellow-eyed">Yellow-eyed Penguin (Megadyptes antipodes)</a></li>
+                        <li><a href="/types/white-flippered">White-flippered Penguin (Eudyptula albosignata)</a></li>
+                    </ul>
+                </section>
+            </div>
+            <footer>
+                <p><span class="copyleft">&copy;</span> PengiCoder & MrPiggy105, { currentYear }</p>
+            </footer>
+        </main>
+	</body>
+</Layout>
+
+<style>
+    .contents ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contents li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+
+    h1{
+        text-align: center;
+        height: 100%;
+        font-family: 'Orkney', Arial;
+    }
+</style>

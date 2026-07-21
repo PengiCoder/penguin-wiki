@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Penguin-Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+---
+
+<Layout title="Penguins">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Penguins - Pages</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1>List of Pages</h1>
+        </header>
+        <Navbar/>
+        <div class="container">
+            <nav class="contents">
+                <h2>Contents:</h2>
+                <ul>
+                    <li><a href="#overview">Main Pages</a></li>
+                    <li><a href="#types">Types of Penguins</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <section id="overview">
+                <p>This list can also be found on the <a href="index.html">homepage.</a></p>
+                <h2>Main Pages</h2>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="pages.html">Page List (this one!)</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </section>
+            <section id="types">
+                <h2>Types of Penguins</h2>
+                <ul>
+                    <li><a href="index.html">Adélie Penguin (Pygoscelis adeliae)</a></li>
+                    <li>African Penguin (Spheniscus demersus)</li>
+                    <li>Chinstrap Penguin (Pygoscelis antarctica)</li>
+                    <li>Emperor Penguin (Aptenodytes forsteri)</li>
+                    <li>Erect-crested Penguin (Eudyptes sclateri)</li>
+                    <li>Fiordland Penguin (Eudyptes pachyrhynchus)</li>
+                    <li>Galapagos Penguin (Spheniscus mendiculus)</li>
+                    <li>Gentoo Penguin (Pygoscelis papua)</li>
+                    <li>Humboldt Penguin (Spheniscus humboldti)</li>
+                    <li>King Penguin (Aptenodytes patagonicus)</li>
+                    <li>Little Blue Penguin (Eudyptula minor)</li>
+                    <li>Macaroni Penguin (Eudyptes chrysolophus)</li>
+                    <li>Magellanic Penguin (Spheniscus magellanicus)</li>
+                    <li>Rockhopper Penguin (Eudyptes chrysocome)</li>
+                    <li>Royal Penguin (Eudyptes schlegeli)</li>
+                    <li>Snares Penguin (Eudyptes robustus)</li>
+                    <li>Yellow-eyed Penguin (Megadyptes antipodes)</li>
+                    <li>White-flippered Penguin (Eudyptula albosignata)</li>
+                </ul>
+            </section>
+            <footer>
+                <p><span class="copyleft">&copy;</span> PengiCoder & MrPiggy105, { currentYear }</p>
+            </footer>
+        </div>
+    </body>
+</Layout>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', Arial;
+        background-image: url('/assets/decoration.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: black;
+    }
+
+    a {
+        color: #54a2f0;
+    }
+
+    .header {
+        background-color: #5b9bdb;
+        padding: 20px;
+        text-align: center;
+        opacity: 92.5%
+    }
+
+    .container {
+        margin: 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .contents {
+        float: left;
+        width: 30%;
+        height: 100%;
+        margin-right: 20px;
+    }
+
+    .contents ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contents li {
+        margin-bottom: 10px;
+    }
+
+    section {
+        overflow: hidden;
+        margin-bottom: 20px;
+        margin-left: 30%;
+    }
+
+    h1{
+        text-align: center;
+        height: 100%;
+        font-family: 'Orkney', Arial;
+    }
+</style>
