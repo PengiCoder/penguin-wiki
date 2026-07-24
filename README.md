@@ -1,5 +1,5 @@
 # Penguin
-## `A fun static site about penguins`
+## `A fun site made in [Astro](https://astro.build) about penguins`
 ### `By @PengiCoder and @MrPiggy105`
 ### Welcome to Penguin
 This is a *fun* informative site with details about the wonderful world of penguins.
